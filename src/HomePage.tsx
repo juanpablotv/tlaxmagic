@@ -39,10 +39,10 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
+    <div className="min-h-screen bg-white text-black p-10">
       <header className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-purple-500">MagicTlax</h1>
-        <p className="text-blue-400 text-lg mt-2">
+        <h1 className="text-4xl font-bold text-white-600">MagicTlax</h1>
+        <p className="text-gray-500 text-lg mt-5">
           Descubre los pueblos mágicos de Tlaxcala
         </p>
       </header>
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
           >
             <Card className="text-black cursor-pointer">
               <CardContent>
-                <h2 className="text-xl font-semibold text-purple-600">
+                <h2 className="text-xl font-semibold text-white-600">
                   {town.title}
                 </h2>
                 <p className="text-gray-800 mt-2">{town.description}</p>
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
         ))}
       </main>
 
-      <footer className="mt-12 text-center text-gray-500 text-sm">
+      <footer className="mt-200 text-center text-gray-500 text-sm">
         © 2025 MagicTlax. Todos los derechos reservados.
       </footer>
     </div>
