@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Definición local de los componentes Card y CardContent
 type CardProps = {
@@ -41,7 +42,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white p-6">
       <header className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-purple-500">MagicTlax</h1>
+        <h1 className="text-4xl font-bold text-purple-500">TlaxMagic</h1>
         <p className="text-blue-400 text-lg mt-2">
           Descubre los pueblos mágicos de Tlaxcala
         </p>
@@ -66,9 +67,24 @@ const HomePage: React.FC = () => {
         ))}
       </main>
 
+      
+      <div className="flex space-x-4 mt-6">
+        <Link to="/contacto">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600">
+            Contáctanos
+          </button>
+        </Link>
+        <Link to="/acercade">
+          <button className="bg-green-500 text-white px-4 py-2 rounded-xl hover:bg-green-600">
+            Acerca de
+          </button>
+        </Link>
+      </div>
+
       <footer className="mt-12 text-center text-gray-500 text-sm">
-        © 2025 MagicTlax. Todos los derechos reservados.
+        © 2025 TlaxMagic. Todos los derechos reservados.
       </footer>
+
     </div>
   );
 };
