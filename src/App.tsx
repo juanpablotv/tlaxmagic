@@ -1,17 +1,19 @@
-// // export default function App() {
-// //   return (
-// //     <div >
-// //       <h1 className="font-extrabold text-2xl">Welcome to magic tlax</h1>
-      
-// //     </div>
-// //   )
-// // }
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import Contact from './Contact';
+import About from './About';
 
-import React from 'react';
-import HomePage from './HomePage'; // Asegúrate que el archivo esté en src/
 
 function App() {
-  return <HomePage />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contacto" element={<Contact />} />
+        <Route path="/acercade" element={<About />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
