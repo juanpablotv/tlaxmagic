@@ -2,15 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
+
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("session");
+    navigate("/login");
+  };
 
   const towns = [
     {
       title: 'Ixtenco',
       description:
         'Pueblo otomí que destaca por su riqueza cultural, artesanías y la iglesia de San Juan Bautista.',
-      image: '/images/ixtenco2.jpg', 
+      image: '/images/ixtenco2.jpg',
     },
     {
       title: 'Huamantla',
@@ -51,6 +57,13 @@ const HomePage: React.FC = () => {
           >
             Contact
           </motion.button>
+
+          <button
+          onClick={handleLogout}
+          className="absolute right-0 top-0 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+        >
+          Cerrar sesión
+        </button>
         </div>
       </header>
 
