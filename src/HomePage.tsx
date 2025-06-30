@@ -57,6 +57,15 @@ const HomePage: React.FC = () => {
           >
             Contact
           </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate('/mapa')}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+          >
+            Mapa
+          </motion.button>
+
 
           <button
           onClick={handleLogout}
@@ -91,7 +100,9 @@ const HomePage: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: 'spring', stiffness: 300 }}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
-                onClick={() => alert(`Explorando ${town.title}`)}
+                
+                onClick={() => navigate('/' + town.title.toLowerCase())} // Navegar a la página del pueblo
+                
               >
                 Explorar
               </motion.button>
