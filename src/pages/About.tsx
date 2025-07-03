@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const About: React.FC = () => {
+  const navigate = useNavigate();
+
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-10 bg-white text-black">
       <h1 className="text-4xl font-bold text-blue-800 mb-6">Sobre MagicTlax</h1>
@@ -16,6 +20,13 @@ const About: React.FC = () => {
         <br /><br />
         ¡Descubre con nosotros la magia que vive en cada rincón de Tlaxcala!
       </p>
+      <button
+        onClick={() => navigate('/')}
+        className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition mb-4 mt-8"
+      >
+        <span className="text-xl">&#8592;</span> {/* Flecha izquierda */}
+        Volver al Home
+      </button>
     </div>
   );
 };

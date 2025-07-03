@@ -2,15 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
+
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("session");
+    navigate("/login");
+  };
 
   const towns = [
     {
       title: 'Ixtenco',
       description:
         'Pueblo otomí que destaca por su riqueza cultural, artesanías y la iglesia de San Juan Bautista.',
-      image: '/images/ixtenco2.jpg', 
+      image: '/images/ixtenco2.jpg',
     },
     {
       title: 'Huamantla',
@@ -30,7 +36,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 text-black p-10">
       {/* Encabezado */}
       <header className="text-center mb-10">
-        <h1 className="text-5xl font-extrabold text-blue-800">MagicTlax</h1>
+        <h1 className="text-5xl font-extrabold text-black ">MagicTlax</h1>
         <p className="text-gray-600 text-lg mt-3">
           Descubre los pueblos mágicos de Tlaxcala
         </p>
@@ -39,7 +45,7 @@ const HomePage: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate('/about')}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
           >
             About
           </motion.button>
@@ -47,10 +53,26 @@ const HomePage: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate('/contact')}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
           >
             Contact
           </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate('/mapa')}
+            className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+          >
+            Mapa
+          </motion.button>
+
+
+          <button
+          onClick={handleLogout}
+          className="absolute right-0 top-0 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+        >
+          Cerrar sesión
+        </button>
         </div>
       </header>
 
@@ -77,8 +99,10 @@ const HomePage: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
-                onClick={() => alert(`Explorando ${town.title}`)}
+                className="bg-black text-white px-4 py-2 rounded-lg shadow  hover:bg-blue-700"
+                
+                onClick={() => navigate('/' + town.title.toLowerCase())} // Navegar a la página del pueblo
+                
               >
                 Explorar
               </motion.button>
