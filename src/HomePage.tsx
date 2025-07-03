@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 text-black p-10">
       {/* Encabezado */}
       <header className="text-center mb-10">
-        <h1 className="text-5xl font-extrabold text-blue-800">MagicTlax</h1>
+        <h1 className="text-5xl font-extrabold text-black ">MagicTlax</h1>
         <p className="text-gray-600 text-lg mt-3">
           Descubre los pueblos mágicos de Tlaxcala
         </p>
@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate('/about')}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
           >
             About
           </motion.button>
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate('/contact')}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
           >
             Contact
           </motion.button>
@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate('/mapa')}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
           >
             Mapa
           </motion.button>
@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700"
+                className="bg-black text-white px-4 py-2 rounded-lg shadow  hover:bg-blue-700"
                 
                 onClick={() => navigate('/' + town.title.toLowerCase())} // Navegar a la página del pueblo
                 
