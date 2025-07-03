@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import ForgotPassword from './ForgotPassword';
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
