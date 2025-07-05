@@ -9,7 +9,8 @@ import Mapa from './pages/mapa';
 import Huamantla from './pages/Huamantla';
 import Ixtenco from './pages/Ixtenco';
 import Tlaxco from './pages/Tlaxco';
-import TradiHuamantla from './pages/tradiHuamantla';
+import Tradiciones from './pages/tradiHuamantla';
+
 
 const App: React.FC = () => {
   return (
@@ -24,7 +25,8 @@ const App: React.FC = () => {
         <Route path="/huamantla" element={<Huamantla />} />
         <Route path="/ixtenco" element={<Ixtenco />} />
         <Route path="/tlaxco" element={<Tlaxco />} />
-       <Route path="/tradiHuamantla" element={<TradiHuamantla />} />
+       <Route path="/tradiHuamantla" element={<Tradiciones />} />
+       
 
       </Routes>
     </Router>

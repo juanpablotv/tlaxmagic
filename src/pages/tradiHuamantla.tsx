@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const TradiHuamantla: React.FC = () => {
+const Tradiciones: React.FC = () => {
   const navigate = useNavigate();
 
   const tradiciones = [
     {
       titulo: 'La Noche que Nadie Duerme',
       descripcion: 'Celebrada en agosto durante la feria de Huamantla, esta tradición consiste en la elaboración de alfombras de aserrín multicolor que decoran las calles por donde pasa la imagen de la Virgen de La Caridad en una procesión nocturna.',
-      imagen: '/tradiciones/noche-que-nadie-duerme.jpg'
+      imagen: ''
     },
     {
       titulo: 'Feria de Huamantla',
@@ -37,10 +37,7 @@ const TradiHuamantla: React.FC = () => {
           <button onClick={() => navigate('/buscar')} className="text-left hover:text-blue-500">Buscar</button>
           <button onClick={() => navigate('/zonas')} className="text-left hover:text-blue-500">Zonas Turísticas</button>
 
-          <h3 className="mt-4 font-semibold">Pueblos Mágicos</h3>
-          <button onClick={() => navigate('/huamantla')} className="text-left hover:text-blue-500">Huamantla</button>
-          <button onClick={() => navigate('/ixtenco')} className="text-left hover:text-blue-500">Ixtenco</button>
-          <button onClick={() => navigate('/tlaxco')} className="text-left hover:text-blue-500">Tlaxco</button>
+        
 
           <h3 className="mt-4 font-semibold">Categorías</h3>
           <button onClick={() => navigate('/tradiciones')} className="text-left hover:text-blue-500 font-bold">Tradiciones</button>
@@ -75,4 +72,4 @@ const TradiHuamantla: React.FC = () => {
   );
 };
 
-export default TradiHuamantla;
+export default Tradiciones;
